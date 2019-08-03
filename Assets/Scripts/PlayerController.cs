@@ -25,6 +25,7 @@ public class PlayerController : Singleton<PlayerController>
         rb2d = GetComponent<Rigidbody2D>();
         rb2d.constraints = RigidbodyConstraints2D.FreezeRotation;
         powerbarImage.fillAmount = 0.0f;
+        Physics2D.IgnoreLayerCollision(9, 10, true);
     }
 
     // Update is called once per frame

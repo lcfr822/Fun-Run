@@ -68,6 +68,8 @@
     <Compile Include="Assets\Scripts\Utilities\ExtensionMethods.cs" />
     <Compile Include="Assets\Scripts\Utilities\Singleton.cs" />
     <Compile Include="Assets\Scripts\Utilities\UnityEngineExtensions.cs" />
+    <Compile Include="Assets\Scripts\World\ObstacleController.cs" />
+    <Compile Include="Assets\Scripts\World\ObstacleFlip.cs" />
     <Compile Include="Assets\Scripts\World\RepeatingObjectController.cs" />
     <Compile Include="Assets\Scripts\World\ScrollingObjectController.cs" />
     <Reference Include="Unity.Timeline.Editor">

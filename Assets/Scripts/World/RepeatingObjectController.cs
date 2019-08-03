@@ -5,12 +5,12 @@ using UnityEngine;
 public class RepeatingObjectController : MonoBehaviour
 {
     private BoxCollider2D groundCollider;
-    private float groundHorizontalLength = 24.5f;
+    public bool causesSpawn = false;
+    public float groundHorizontalLength = 24.5f;
 
     private void Awake()
     {
         groundCollider = GetComponent<BoxCollider2D>();
-        //groundHorizontalLength = groundCollider.size.x;
     }
 
     void Update()
@@ -26,5 +26,19 @@ public class RepeatingObjectController : MonoBehaviour
     {
         Vector2 groundOffset = new Vector2(groundHorizontalLength * 2f, 0);
         transform.position = (Vector2)transform.position + groundOffset;
+        if (causesSpawn)
+        {
+            if(transform.childCount > 0)
+            {
+                for(int i = 0; i < transform.childCount; i++)
+                {
+                    if (transform.GetChild(i).name.ToLower().Contains("low")) { ObstacleController.Instance.lowCount--; }
+                    else if (transform.GetChild(i).name.ToLower().Contains("mid")) { ObstacleController.Instance.midCount--; }
+                    else if (transform.GetChild(i).name.ToLower().Contains("high")) { ObstacleController.Instance.highCount--; }
+                    Destroy(transform.GetChild(i).gameObject);
+                }
+            }
+            ObstacleController.Instance.ChanceBasedSpawn(transform.position, transform);
+        }
     }
 }
