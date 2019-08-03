@@ -3,8 +3,11 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - GameController
     - ImageButton
+    - ObstacleController
+    - ObstacleFlip
     - PlayerController
     - RepeatingObjectController
+    - ScoreDetector
     - ScrollingObjectController
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
@@ -20,6 +23,7 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
+    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -27,6 +31,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Shadow
     - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/PlayScene.unity:
@@ -46,6 +51,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 61
       Script: {instanceID: 0}
+    - Class: 68
+      Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
@@ -57,29 +64,37 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9650}
+      Script: {instanceID: 9662}
     - Class: 114
-      Script: {instanceID: 9714}
+      Script: {instanceID: 9726}
     - Class: 114
-      Script: {instanceID: 9816}
+      Script: {instanceID: 9828}
     - Class: 114
-      Script: {instanceID: 9856}
+      Script: {instanceID: 9868}
     - Class: 114
-      Script: {instanceID: 9870}
+      Script: {instanceID: 9882}
     - Class: 114
-      Script: {instanceID: 10258}
+      Script: {instanceID: 10202}
     - Class: 114
-      Script: {instanceID: 10430}
+      Script: {instanceID: 10270}
     - Class: 114
-      Script: {instanceID: 10448}
+      Script: {instanceID: 10364}
     - Class: 114
-      Script: {instanceID: 10628}
+      Script: {instanceID: 10444}
     - Class: 114
-      Script: {instanceID: 10830}
+      Script: {instanceID: 10462}
     - Class: 114
-      Script: {instanceID: 11102}
+      Script: {instanceID: 10642}
     - Class: 114
-      Script: {instanceID: 11472}
+      Script: {instanceID: 10754}
+    - Class: 114
+      Script: {instanceID: 10846}
+    - Class: 114
+      Script: {instanceID: 11118}
+    - Class: 114
+      Script: {instanceID: 11488}
+    - Class: 114
+      Script: {instanceID: 17932}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -125,7 +140,7 @@ ScriptsOnlyBuild:
     className: TMP_Dropdown
   - hash:
       serializedVersion: 2
-      Hash: e6d0b596de505416f92d489d2464d87c
+      Hash: 5dabb89f61f1ccecd18185c4990da914
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameController
@@ -299,13 +314,19 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
+      Hash: b6b330aabd14f5a711ae744746f02ec4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ObstacleController
+  - hash:
+      serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_Asset
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 72295fa6e20c1d17ae1bfaf8da4c1a66
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: RepeatingObjectController
@@ -363,6 +384,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: VerticalLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: da94265af2cbdfe38a61f011efb8a1d9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ObstacleFlip
   - hash:
       serializedVersion: 2
       Hash: 12e64d607873da15ad3f833620350d51
@@ -543,6 +570,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: ad398d164051aa67cf8ddfcabe90a046
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ScoreDetector
   platform: 13
   scenePathNames:
   - Assets/Scenes/PlayScene.unity

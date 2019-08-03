@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\World\ObstacleController.cs" />
     <Compile Include="Assets\Scripts\World\ObstacleFlip.cs" />
     <Compile Include="Assets\Scripts\World\RepeatingObjectController.cs" />
+    <Compile Include="Assets\Scripts\World\ScoreDetector.cs" />
     <Compile Include="Assets\Scripts\World\ScrollingObjectController.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Sam/Documents/Unity/Fun Run/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

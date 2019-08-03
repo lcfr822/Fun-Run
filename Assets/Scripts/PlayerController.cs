@@ -72,17 +72,18 @@ public class PlayerController : Singleton<PlayerController>
     {
         if (canJump)
         {
-            float maxHold = 2.0f;
             float currentHold = 0.0f;
             Vector2 jump = Vector2.zero;
 
             canJump = false;
 
-            while (poweringJump && currentHold < maxHold)
+            while(poweringJump && powerbarImage.fillAmount < 1.0f)
             {
-                currentHold += Time.deltaTime;
+                currentHold += 5.0f * Time.deltaTime;
+                Debug.Log(currentHold);
                 jump = Vector2.up * ((currentHold * 5.0f) + 5);
-                powerbarImage.fillAmount = ((currentHold * 5.0f) + 5).Map(5, 15, 0, 1);
+                Debug.Log(jump);
+                powerbarImage.fillAmount = ((currentHold * 5.0f) + 5).Map(5, 20, 0, 1);
                 if (!poweringJump)
                 {
                     break;

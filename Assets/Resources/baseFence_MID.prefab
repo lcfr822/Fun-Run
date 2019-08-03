@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 8364182853933401610}
   - component: {fileID: 8364182853933401608}
   - component: {fileID: 166863634}
+  - component: {fileID: 3014913552760076456}
+  - component: {fileID: 829728296}
   m_Layer: 11
   m_Name: baseFence_MID
   m_TagString: Untagged
@@ -117,3 +119,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rhsSprite: {fileID: 21300000, guid: 78bffad2acab31b4b8621cc5a1423176, type: 3}
   lhsSprite: {fileID: 21300000, guid: 996d438253e85364283f911681589c0f, type: 3}
+--- !u!114 &3014913552760076456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8364182853933401611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 269ece6948485104b8783764af166a89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointValue: 10
+--- !u!61 &829728296
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8364182853933401611}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.118781626, y: 19.779583}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 20.48, y: 20.48}
+    newSize: {x: 20.48, y: 20.48}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.7598733, y: 23.449905}
+  m_EdgeRadius: 0

@@ -25,26 +25,26 @@ public class ObstacleController : Singleton<ObstacleController>
     public void ChanceBasedSpawn(Vector2 spawnPoint, Transform parent)
     {
         float rand = Random.value;
-        float xOffsetActual = (Random.value > 0.5f) ? xOffset : -xOffset;
+        float xOffsetActual = (Random.value > 0.5f) ? xOffset / 2 : -xOffset / 2;
         GameObject spawnedObstacle = null;
 
         if(lowCount < 3 && rand < 0.45f)
         {
-            spawnedObstacle = Instantiate(lowObstacles[0], new Vector3(spawnPoint.x + xOffset, lowHeight, 0.0f), Quaternion.identity);
+            spawnedObstacle = Instantiate(lowObstacles[0], new Vector3(spawnPoint.x + xOffsetActual, lowHeight, 0.0f), Quaternion.identity);
             spawnedObstacle.transform.parent = parent;
             lowCount++;
             return;
         }
-        if(midCount < 2 && rand < 0.8f && rand > 0.44f)
+        if(midCount < 2 && rand < 0.8f && rand > 0.45f)
         {
-            spawnedObstacle = Instantiate(midObstacles[0], new Vector3(spawnPoint.x + xOffset, midHeight, 0.0f), Quaternion.identity);
+            spawnedObstacle = Instantiate(midObstacles[0], new Vector3(spawnPoint.x, midHeight, 0.0f), Quaternion.identity);
             spawnedObstacle.transform.parent = parent;
             midCount++;
             return;
         }
-        if(highCount < 1 && rand <= 1.0f && rand > 0.79f)
+        if(highCount < 1 && rand <= 1.0f && rand > 0.8f)
         {
-            spawnedObstacle = Instantiate(highObstacles[0], new Vector3(spawnPoint.x + xOffset, highHeight, 0.0f), Quaternion.identity);
+            spawnedObstacle = Instantiate(highObstacles[0], new Vector3(spawnPoint.x + xOffsetActual, highHeight, 0.0f), Quaternion.identity);
             spawnedObstacle.transform.parent = parent;
             highCount++;
         }
