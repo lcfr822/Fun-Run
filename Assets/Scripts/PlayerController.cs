@@ -80,11 +80,9 @@ public class PlayerController : Singleton<PlayerController>
             while(poweringJump && powerbarImage.fillAmount < 1.0f)
             {
                 currentHold += 5.0f * Time.deltaTime;
-                Debug.Log(currentHold);
                 jump = Vector2.up * ((currentHold * 5.0f) + 5);
-                Debug.Log(jump);
                 powerbarImage.fillAmount = ((currentHold * 5.0f) + 5).Map(5, 20, 0, 1);
-                if (!poweringJump)
+                if (!poweringJump || powerbarImage.fillAmount >= 1.0f)
                 {
                     break;
                 }
@@ -106,6 +104,14 @@ public class PlayerController : Singleton<PlayerController>
                 yield return null;
             }
             clearing = false;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.layer == 11)
+        {
+            Debug.Log("Collided with an obstacle");
         }
     }
 }

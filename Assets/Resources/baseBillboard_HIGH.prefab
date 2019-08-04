@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 859309591}
   - component: {fileID: 5146275746669584924}
   - component: {fileID: 1508608572192524467}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: baseBillboard_HIGH
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.4454916, y: 13.9585495}
