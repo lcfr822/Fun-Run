@@ -11,55 +11,44 @@ public class ObstacleController : Singleton<ObstacleController>
     private float xOffset = 4.096f;
     public int lowCount, midCount, highCount = 0;
 
+    public enum ObstacleType { Low, Medium, High }
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(SpawnProtection());
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ChanceBasedSpawn(Vector2 spawnPoint)
     {
-        
-    }
+        float rand = Random.value;
+        float xOffsetActual = (Random.value > 0.5f) ? xOffset / 2 : -xOffset / 2;
 
-    public void ChanceBasedSpawn(Vector2 spawnPoint, Transform parent)
-    {
-        if (canSpawn)
+        if (lowCount < 3 && rand < 0.45f)
         {
-            float rand = Random.value;
-            float xOffsetActual = (Random.value > 0.5f) ? xOffset / 2 : -xOffset / 2;
-            GameObject spawnedObstacle = null;
-
-            if (lowCount < 3 && rand < 0.45f)
-            {
-                spawnedObstacle = Instantiate(lowObstacles[0], new Vector3(spawnPoint.x + xOffsetActual, lowHeight, 0.0f), Quaternion.identity);
-                spawnedObstacle.transform.parent = parent;
-                lowCount++;
-                return;
-            }
-            if (midCount < 2 && rand < 0.8f && rand > 0.45f)
-            {
-                spawnedObstacle = Instantiate(midObstacles[0], new Vector3(spawnPoint.x, midHeight, 0.0f), Quaternion.identity);
-                spawnedObstacle.transform.parent = parent;
-                midCount++;
-                return;
-            }
-            if (highCount < 1 && rand <= 1.0f && rand > 0.8f)
-            {
-                spawnedObstacle = Instantiate(highObstacles[0], new Vector3(spawnPoint.x + xOffsetActual, highHeight, 0.0f), Quaternion.identity);
-                spawnedObstacle.transform.parent = parent;
-                highCount++;
-            }
-
+            Instantiate(lowObstacles[0], new Vector3(spawnPoint.x + xOffsetActual, lowHeight, 0.0f), Quaternion.identity);
+            lowCount++;
+            StartCoroutine(SpawnProtection());
+            return;
+        }
+        else if (midCount < 2 && rand < 0.8f && rand > 0.45f)
+        {
+            Instantiate(midObstacles[0], new Vector3(spawnPoint.x, midHeight, 0.0f), Quaternion.identity);
+            midCount++;
+            StartCoroutine(SpawnProtection());
+            return;
+        }
+        else if (highCount < 1 && rand <= 1.0f && rand > 0.8f)
+        {
+            Instantiate(highObstacles[0], new Vector3(spawnPoint.x + xOffsetActual, highHeight, 0.0f), Quaternion.identity);
+            highCount++;
             StartCoroutine(SpawnProtection());
         }
     }
 
     public IEnumerator SpawnProtection()
     {
-        canSpawn = false;
-        yield return new WaitForSeconds(5.0f);
-        canSpawn = true;
+        yield return new WaitForSeconds(Random.Range(2.0f, 5.0f));
+        ChanceBasedSpawn(new Vector2(24.0f, 0.0f));
     }
 }

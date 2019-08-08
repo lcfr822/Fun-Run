@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4685275843212971466}
   - component: {fileID: 859309591}
   - component: {fileID: 5146275746669584924}
+  - component: {fileID: 6069641261109579174}
   - component: {fileID: 1508608572192524467}
   m_Layer: 11
   m_Name: baseBillboard_HIGH
@@ -136,6 +137,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointValue: 25
+--- !u!114 &6069641261109579174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4685275843212971469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b9ae2028b1a9e741acd0f9d53239e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoDestruct: 1
+  offset: 0
+  speed: 10
+  deletePoint: -22.45
+  obstacleType: 2
 --- !u!61 &1508608572192524467
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -149,7 +167,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.4454916, y: 13.9585495}
+  m_Offset: {x: -0.4454916, y: 20.078445}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -160,5 +178,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.18572485, y: 12.362278}
+  m_Size: {x: 0.18572485, y: 24.602089}
   m_EdgeRadius: 0

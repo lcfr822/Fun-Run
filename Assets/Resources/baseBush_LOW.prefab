@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8847452192445632097}
   - component: {fileID: 8847452192445632103}
   - component: {fileID: 88716614364159155}
+  - component: {fileID: 4327592891908884304}
   - component: {fileID: 1656285557}
   m_Layer: 11
   m_Name: baseBush_LOW
@@ -130,6 +131,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointValue: 5
+--- !u!114 &4327592891908884304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8847452192445632096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b9ae2028b1a9e741acd0f9d53239e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoDestruct: 0
+  offset: 0
+  speed: 10
+  deletePoint: -22.45
+  obstacleType: 0
 --- !u!61 &1656285557
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -143,7 +161,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.19802883, y: 62.962116}
+  m_Offset: {x: -0.1980288, y: 113.14815}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -154,5 +172,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0765224, y: 106.80532}
+  m_Size: {x: 1.0765224, y: 207.1774}
   m_EdgeRadius: 0

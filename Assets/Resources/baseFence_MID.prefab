@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8364182853933401608}
   - component: {fileID: 166863634}
   - component: {fileID: 3014913552760076456}
+  - component: {fileID: 8981828326684841023}
   - component: {fileID: 829728296}
   m_Layer: 11
   m_Name: baseFence_MID
@@ -132,6 +133,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointValue: 10
+--- !u!114 &8981828326684841023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8364182853933401611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b9ae2028b1a9e741acd0f9d53239e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoDestruct: 0
+  offset: 0
+  speed: 10
+  deletePoint: -22.45
+  obstacleType: 1
 --- !u!61 &829728296
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -145,7 +163,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.118781626, y: 19.779583}
+  m_Offset: {x: 0.118781626, y: 30.997683}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -156,5 +174,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7598733, y: 23.449905}
+  m_Size: {x: 0.7598733, y: 45.886105}
   m_EdgeRadius: 0

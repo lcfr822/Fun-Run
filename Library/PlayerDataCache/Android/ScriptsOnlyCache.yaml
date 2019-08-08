@@ -86,15 +86,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10642}
     - Class: 114
-      Script: {instanceID: 10754}
+      Script: {instanceID: 10740}
     - Class: 114
-      Script: {instanceID: 10846}
+      Script: {instanceID: 10756}
     - Class: 114
-      Script: {instanceID: 11118}
+      Script: {instanceID: 10848}
     - Class: 114
-      Script: {instanceID: 11488}
+      Script: {instanceID: 11120}
     - Class: 114
-      Script: {instanceID: 17932}
+      Script: {instanceID: 11490}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -200,7 +200,7 @@ ScriptsOnlyBuild:
     className: TestResultRendererCallback
   - hash:
       serializedVersion: 2
-      Hash: 5d8832804229b76f797aff17e505f72c
+      Hash: d7ff9a2c4cc88690090eaa507e274c19
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ScrollingObjectController
@@ -384,6 +384,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: VerticalLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: ad398d164051aa67cf8ddfcabe90a046
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ScoreDetector
   - hash:
       serializedVersion: 2
       Hash: da94265af2cbdfe38a61f011efb8a1d9
@@ -570,12 +576,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: ad398d164051aa67cf8ddfcabe90a046
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ScoreDetector
   platform: 13
   scenePathNames:
   - Assets/Scenes/PlayScene.unity

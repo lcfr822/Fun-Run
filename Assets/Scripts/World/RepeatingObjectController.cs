@@ -38,7 +38,6 @@ public class RepeatingObjectController : MonoBehaviour
                     Destroy(transform.GetChild(i).gameObject);
                 }
             }
-            ObstacleController.Instance.ChanceBasedSpawn(transform.position, transform);
         }
     }
 }
