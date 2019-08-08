@@ -49,7 +49,7 @@ public class PlayerController : Singleton<PlayerController>
                 canJump = true;
                 jumpButton.Interactive = true;
             }
-            if (GetComponent<Animator>().speed < 1) { GetComponent<Animator>().speed = 1; }
+            if (GetComponent<Animator>().speed < 1 && GameController.Instance.gameRunning) { GetComponent<Animator>().speed = 1; }
         }
         else if (!GameController.Instance.gameRunning && GetComponent<Animator>().speed > 0)
         {
@@ -66,6 +66,13 @@ public class PlayerController : Singleton<PlayerController>
     public void EndJump()
     {
         poweringJump = false;
+    }
+
+    public void LoseGame()
+    {
+        GameController.Instance.gameRunning = false;
+        rb2d.constraints = RigidbodyConstraints2D.None;
+        GetComponent<Animator>().speed = 0;
     }
 
     public IEnumerator IncreaseJumpForce()
@@ -112,6 +119,7 @@ public class PlayerController : Singleton<PlayerController>
         if(collision.gameObject.layer == 11)
         {
             Debug.Log("Collided with an obstacle");
+            LoseGame();
         }
     }
 }
